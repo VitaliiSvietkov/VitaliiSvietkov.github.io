@@ -46,6 +46,7 @@ function showDetails(event) {
     let blackout = document.createElement('div');
     blackout.className = 'blackout';
     body[0].appendChild(blackout);
+    fadeIn(blackout);
 
     // Create container for the detailed information
     let container = document.createElement('div');
@@ -68,18 +69,22 @@ function showDetails(event) {
     blackout.appendChild(container);
 
     let rect = blackout.children[0].getBoundingClientRect();
-    container.style.width = '0px';
-    container.style.height = '0px';
+    //container.style.width = '0px';
+    //container.style.height = '0px';
     blackout.onclick = (e) => {
         let x = e.clientX;
         let y = e.clientY;
 
-        if (rect.left > x || rect.right < x || rect.top > y || rect.bottom < y)
-            body[0].removeChild(blackout);
+        if (rect.left > x || rect.right < x || rect.top > y || rect.bottom < y) {
+            fadeOut(blackout);
+            setTimeout(() => {
+                body[0].removeChild(blackout);
+            }, 200);
+        }
     }
 
     // Animation of appearing
-    let end_width = rect.right - rect.left;
+    /*let end_width = rect.right - rect.left;
     let end_height = rect.bottom - rect.top;
     let start_width = 10;
     let start_height = 10;
@@ -95,7 +100,7 @@ function showDetails(event) {
         container.style.width = end_width + 'px';
         container.style.height = end_height + 'px';
         clearInterval(handle_id);
-    }, 200);
+    }, 200);*/
 
     container.focus();
 }
@@ -165,6 +170,60 @@ function hideAbout(event) {
     }, 201);
 }
 
-function showLangs(event) {
-    
+function showLangs(event, animation) {
+    if (document.getElementById('languageContainer') !== null) {
+        fadeOut(document.getElementById('languageContainer'));
+        setTimeout(() => {
+            document.getElementsByTagName('body')[0].removeChild(document.getElementById('languageContainer'));
+        }, 200);
+        return;
+    }
+    let container = document.createElement('div');
+    container.className = "languageContainer";
+    container.id = 'languageContainer';
+    container.style.opacity = 1;
+    let rus = document.createElement('div');
+    rus.className = "languageItem";
+    rus.innerHTML = 'RUS';
+    let eng = document.createElement('div');
+    eng.className = "languageItem";
+    eng.innerHTML = 'ENG';
+    container.appendChild(rus);
+    container.appendChild(eng);
+
+    document.getElementsByTagName('body')[0].appendChild(container);
+    container.style.left = event.clientX + 5 + 'px';
+    container.style.top = event.clientY + 5 + 'px';
+
+    animation(container);
+}
+
+function fadeIn(element) {
+    let opacity = 0;
+    element.style.opacity = opacity;
+    let handle_id = setInterval(() => {
+        if (!element) {
+            clearInterval(handle_id);
+            return;
+        }
+        opacity += 0.05;
+        element.style.opacity = opacity;
+        if (opacity >= 1)
+            clearInterval(handle_id);
+    }, 10);
+}
+
+function fadeOut(element) {
+    let opacity = 1;
+    element.style.opacity = opacity;
+    let handle_id = setInterval(() => {
+        if (!element) {
+            clearInterval(handle_id);
+            return;
+        }
+        opacity -= 0.05;
+        element.style.opacity = opacity;
+        if (opacity >= 1)
+            clearInterval(handle_id);
+    }, 10);
 }
