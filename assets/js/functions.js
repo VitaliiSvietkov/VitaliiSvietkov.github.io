@@ -164,3 +164,7 @@ function hideAbout(event) {
         }, 15);
     }, 201);
 }
+
+function showLangs(event) {
+    
+}

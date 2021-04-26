@@ -142,6 +142,17 @@ input, select, textarea {
 	margin-top: -20px;
 }
 
+#language {
+	border-bottom: none;
+	position: absolute;
+	top: 15px;
+	left: -94%;
+}
+#language:hover {
+	color: #49bf9d;
+	cursor: pointer;
+}
+
 /* Basic */
 
 	html {
