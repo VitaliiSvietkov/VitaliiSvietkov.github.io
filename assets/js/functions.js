@@ -1,3 +1,5 @@
+//import i18next from './localization.js';
+
 function displayMessage(event, message) {
     // Create and add body
     let node = document.createElement('div');
@@ -185,9 +187,23 @@ function showLangs(event, animation) {
     let rus = document.createElement('div');
     rus.className = "languageItem";
     rus.innerHTML = 'RUS';
+    rus.onclick = function() { 
+        i18next.changeLanguage('ru'); 
+        fadeOut(container);
+        setTimeout(() => {
+            document.getElementsByTagName('body')[0].removeChild(container);
+        }, 200);
+    };
     let eng = document.createElement('div');
     eng.className = "languageItem";
     eng.innerHTML = 'ENG';
+    eng.onclick = function() { 
+        i18next.changeLanguage('en');
+        fadeOut(container);
+        setTimeout(() => {
+            document.getElementsByTagName('body')[0].removeChild(container);
+        }, 200);
+    };
     container.appendChild(rus);
     container.appendChild(eng);
 
