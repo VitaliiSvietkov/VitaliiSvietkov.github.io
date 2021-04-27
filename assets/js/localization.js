@@ -6,12 +6,14 @@ i18next.init({
   resources: {
     en: {
       translation: {
-        "Introduction": "<strong>I am Vitalii Svietkov</strong>,<br /> a software developer<br /> from Kharkiv, Ukraine<br />"
+        "Introduction": "<strong>I am Vitalii Svietkov</strong>,<br /> a software developer<br /> from Kharkiv, Ukraine<br />",
+        "Quote": "\“Most prisons are of our own making. A man makes his own freedom, too.\” © Robin Hobb"
       }
     },
     ru: {
       translation: {
-        "Introduction": "<strong>Я Виталий Светков</strong>,<br /> разработчик программного <br /> обеспечения из Харькова, Украина<br />"
+        "Introduction": "<strong>Я Виталий Светков</strong>,<br /> разработчик программного <br /> обеспечения из Харькова, Украина<br />",
+        "Quote": "\“В большинстве случаев мы сами строим свою тюрьму. И так же человек создает свою свободу.\” © Робин Хобб"
       }
     }
   }
@@ -21,7 +23,9 @@ i18next.init({
 });
 
 function updateContent() {
-  document.getElementById('Introduction').innerHTML = i18next.t('Introduction');
+  let arr = ["Introduction", "Quote"];
+  for (let i = 0; i < arr.length; ++i)
+    document.getElementById(arr[i]).innerHTML = i18next.t(arr[i]);
 }
 
 function changeLng(lng) {
