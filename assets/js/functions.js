@@ -128,7 +128,10 @@ function expandAbout(event) {
         clearInterval(handle_id);
         about_div.style.display = 'flex';
         event.target.parentElement.parentElement.style.margin = '0';
-        event.target.innerHTML = 'Hide';
+        if (lang === 'en')
+            event.target.innerHTML = 'Hide';
+        else
+            event.target.innerHTML = 'Скрыть';
         event.target.onclick = hideAbout;
 
         let opacity = 0;
@@ -160,7 +163,10 @@ function hideAbout(event) {
         clearInterval(handle_id);
         about_div.style.display = 'none';
         event.target.parentElement.parentElement.style.marginTop = margin + 'px';
-        event.target.innerHTML = 'Learn more';
+        if (lang === 'en')
+            event.target.innerHTML = 'Learn more';
+        else 
+            event.target.innerHTML = 'Подробнее';
         event.target.onclick = expandAbout;
 
         handle_id = setInterval(() => {
@@ -188,7 +194,8 @@ function showLangs(event, animation) {
     rus.className = "languageItem";
     rus.innerHTML = 'RUS';
     rus.onclick = function() { 
-        i18next.changeLanguage('ru'); 
+        i18next.changeLanguage('ru');
+        lang = 'ru';
         fadeOut(container);
         setTimeout(() => {
             document.getElementsByTagName('body')[0].removeChild(container);
@@ -199,6 +206,7 @@ function showLangs(event, animation) {
     eng.innerHTML = 'ENG';
     eng.onclick = function() { 
         i18next.changeLanguage('en');
+        lang = 'en';
         fadeOut(container);
         setTimeout(() => {
             document.getElementsByTagName('body')[0].removeChild(container);
