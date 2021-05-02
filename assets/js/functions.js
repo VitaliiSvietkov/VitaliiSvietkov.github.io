@@ -195,7 +195,7 @@ function showLangs(event, animation) {
     rus.innerHTML = 'RUS';
     rus.onclick = function() { 
         i18next.changeLanguage('ru');
-        lang = 'ru';
+        window.lang = 'ru';
         fadeOut(container);
         setTimeout(() => {
             document.getElementsByTagName('body')[0].removeChild(container);
@@ -206,7 +206,7 @@ function showLangs(event, animation) {
     eng.innerHTML = 'ENG';
     eng.onclick = function() { 
         i18next.changeLanguage('en');
-        lang = 'en';
+        window.lang = 'en';
         fadeOut(container);
         setTimeout(() => {
             document.getElementsByTagName('body')[0].removeChild(container);

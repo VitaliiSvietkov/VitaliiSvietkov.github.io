@@ -26,9 +26,26 @@ i18next.init({
 
         "Additional": "GTK3 alongside with C was used by me to create \"UCODE-uchat\" project and I can say that I really liked working with it. Of course, there can be a mess in the code, but it was my first experience and I am sure that now I can do better. SDL2 was used to create \"Space Invaders\" game.",
 
-        "LearnMore": "Learn more",
+        "Download": "Download resume",
 
-        "Download": "Download resume"
+        "Works": "Recent works",
+
+        "Skills": "Skills",
+
+        "EduHeader": "Education/Courses",
+
+        "Education": 'Currently I am studying at the\
+        <a target="_blank" href="https://ucode.world/en/?utm_source=google&utm_medium=cpc&utm_campaign=Brand&utm_content=%7Bad_id%7D_%7Bposition_type%7D_%7Bdevice_type%7D&utm_term=ucode&gclid=Cj0KCQjwppSEBhCGARIsANIs4p5Uhpd89u0DVdwejsbKHk2MQKDq8wOXT8-a0dWrQLExCXxo12bGZbcaAmBhEALw_wcB">\
+        UCODE IT academy</a>. Successfully finished\
+        <a target="_blank" href="https://ucode.world/en/programmer-profession/?utm_source=google&utm_medium=cpc&utm_campaign=Brand&utm_content=%7Bad_id%7D_%7Bposition_type%7D_%7Bdevice_type%7D&utm_term=ucode&gclid=Cj0KCQjwppSEBhCGARIsANIs4p5Uhpd89u0DVdwejsbKHk2MQKDq8wOXT8-a0dWrQLExCXxo12bGZbcaAmBhEALw_wcB&utm_source=google&utm_medium=cpc&utm_campaign=Brand&utm_content=%7Bad_id%7D_%7Bposition_type%7D_%7Bdevice_type%7D&utm_term=ucode&gclid=Cj0KCQjwppSEBhCGARIsANIs4p5Uhpd89u0DVdwejsbKHk2MQKDq8wOXT8-a0dWrQLExCXxo12bGZbcaAmBhEALw_wcB&utm_source=google&utm_medium=cpc&utm_campaign=Brand&utm_content=%7Bad_id%7D_%7Bposition_type%7D_%7Bdevice_type%7D&utm_term=ucode&gclid=Cj0KCQjwppSEBhCGARIsANIs4p5Uhpd89u0DVdwejsbKHk2MQKDq8wOXT8-a0dWrQLExCXxo12bGZbcaAmBhEALw_wcB">\
+        IoT/GameDev world</a> program (Only the first two stages - the last one was not included in my university\'s program). As a result I have a deep knowledge of C programming language and implemented my messaging app like Telegram, Viber, or WhatsApp ("uchat") with a simple game ("Space Invaders").\
+        Now I am participating in the\
+        <a target="_blank" href="https://ucode.world/web-full-stack-developer/?utm_source=google&utm_medium=cpc&utm_campaign=Brand&utm_content=%7Bad_id%7D_%7Bposition_type%7D_%7Bdevice_type%7D&utm_term=ucode&gclid=Cj0KCQjwppSEBhCGARIsANIs4p5Uhpd89u0DVdwejsbKHk2MQKDq8wOXT8-a0dWrQLExCXxo12bGZbcaAmBhEALw_wcB">\
+        Full Stack Developer</a> program (the main track) and already developed a multiplayer browser card game in a battle variation (UCODE-CardGame).',
+
+        "ContactHeader": "Get In Touch",
+
+        "ContactDesc": "Drop me a line if you are interested in collaboration. I am looking forward to hearing from you!"
       }
     },
     ru: {
@@ -53,9 +70,26 @@ i18next.init({
 
         "Additional": "GTK3 в связке с С был использован мной для создания \"UCODE-uchat\" и я могу сказать что мне действительно понравилось работать с ним. Естественно, в коде может быть некий хаос, поскольку это был мой первый опыт и сейчас я уверен что теперь смогу даже лучше. На SDL2 была создана игра \"Space Invaders\".",
 
-        "LearnMore": "Подробнее",
+        "Download": "Скачать резюме",
 
-        "Download": "Скачать резюме"
+        "Works": "Недавние работы",
+
+        "Skills": "Навыки",
+
+        "EduHeader": "Образование/Курсы",
+
+        "Education": 'На данный момент я обучаюсь в\
+        <a target="_blank" href="https://ucode.world/en/?utm_source=google&utm_medium=cpc&utm_campaign=Brand&utm_content=%7Bad_id%7D_%7Bposition_type%7D_%7Bdevice_type%7D&utm_term=ucode&gclid=Cj0KCQjwppSEBhCGARIsANIs4p5Uhpd89u0DVdwejsbKHk2MQKDq8wOXT8-a0dWrQLExCXxo12bGZbcaAmBhEALw_wcB">\
+        UCODE IT академии</a>. Успешно завершил\
+        <a target="_blank" href="https://ucode.world/en/programmer-profession/?utm_source=google&utm_medium=cpc&utm_campaign=Brand&utm_content=%7Bad_id%7D_%7Bposition_type%7D_%7Bdevice_type%7D&utm_term=ucode&gclid=Cj0KCQjwppSEBhCGARIsANIs4p5Uhpd89u0DVdwejsbKHk2MQKDq8wOXT8-a0dWrQLExCXxo12bGZbcaAmBhEALw_wcB&utm_source=google&utm_medium=cpc&utm_campaign=Brand&utm_content=%7Bad_id%7D_%7Bposition_type%7D_%7Bdevice_type%7D&utm_term=ucode&gclid=Cj0KCQjwppSEBhCGARIsANIs4p5Uhpd89u0DVdwejsbKHk2MQKDq8wOXT8-a0dWrQLExCXxo12bGZbcaAmBhEALw_wcB&utm_source=google&utm_medium=cpc&utm_campaign=Brand&utm_content=%7Bad_id%7D_%7Bposition_type%7D_%7Bdevice_type%7D&utm_term=ucode&gclid=Cj0KCQjwppSEBhCGARIsANIs4p5Uhpd89u0DVdwejsbKHk2MQKDq8wOXT8-a0dWrQLExCXxo12bGZbcaAmBhEALw_wcB">\
+        IoT/GameDev world</a> программу (только первые два этапа - послейний не входил в мою университетскую программу). В результате я имею основательные знания языка программирования С, а также реализовал своё приложение для обмена сообщениями как Telegram, Viber, или WhatsApp ("uchat") на ряду с простой игрой ("Space Invaders").\
+        Сейчас я учавствую в\
+        <a target="_blank" href="https://ucode.world/web-full-stack-developer/?utm_source=google&utm_medium=cpc&utm_campaign=Brand&utm_content=%7Bad_id%7D_%7Bposition_type%7D_%7Bdevice_type%7D&utm_term=ucode&gclid=Cj0KCQjwppSEBhCGARIsANIs4p5Uhpd89u0DVdwejsbKHk2MQKDq8wOXT8-a0dWrQLExCXxo12bGZbcaAmBhEALw_wcB">\
+        Full Stack Developer</a> программе (основной этап) и на данный момент создал многопользовательскую браузерную карточную игру в боевой вариации (UCODE-CardGame).',
+
+        "ContactHeader": "Обратная связь",
+
+        "ContactDesc": "Напишите мне, если вы заинтересованы в сотрудничестве. С нетерпение жду вашего письма!"
       }
     }
   }
@@ -66,7 +100,27 @@ i18next.init({
 });
 
 function updateContent() {
-  let arr = ["Introduction", "Quote", "About", "C/C++", "Layout", "JavaScript", "PHP", "Databases", "Additional", "LearnMore", "Download"];
+  let learnMore = document.getElementById('LearnMore');
+  
+  if (window.lang) {
+
+    if (window.lang === 'en') {
+      if (learnMore.innerHTML === 'Learn More')
+        learnMore.innerHTML = 'Подробнее';
+      else
+        learnMore.innerHTML = 'Скрыть';
+    }
+    else {
+      if (learnMore.innerHTML === 'Подробнее')
+        learnMore.innerHTML = 'Learn More';
+      else
+        learnMore.innerHTML = 'Hide';
+    }
+
+  }
+
+  let arr = ["Introduction", "Quote", "About", "C/C++", "Layout", "JavaScript", "PHP", "ContactDesc",
+    "Databases", "Additional", "Download", "Works", "Skills", "EduHeader", "Education", "ContactHeader"];
   for (let i = 0; i < arr.length; ++i)
     document.getElementById(arr[i]).innerHTML = i18next.t(arr[i]);
 }
