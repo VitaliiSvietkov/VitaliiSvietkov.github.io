@@ -45,7 +45,30 @@ i18next.init({
 
         "ContactHeader": "Get In Touch",
 
-        "ContactDesc": "Drop me a line if you are interested in collaboration. I am looking forward to hearing from you!"
+        "ContactDesc": "Drop me a line if you are interested in collaboration. I am looking forward to hearing from you!",
+
+        "Address": "Pushkinska street<br />Kharkiv, TN 62000<br />Ukraine",
+
+        "Design": "Design:",
+
+        "UCODE-CardGame": "<br/>\
+        <ul>\
+          <li> <span class=\"scode\">PHP</span> was used to implement server part and host project.</li>\
+          <li> <span class=\"scode\">JavaScript</span> helped to animate, construct and control game process.</li>\
+          <li> <span class=\"scode\">MVC</span> pattern was used to construct the application structure.</li>\
+          <li> <span class=\"scode\">MySql</span> was used as a database.</li>\
+          <li> <span class=\"scode\">HTTP Websocket server</span> was taken from <a href=\"https://habr.com/ru/post/209864/\" target=\"_blank\">this</a> website, then improved and changed for my project's needs. (code by <a href=\"https://github.com/morozovsk/\" target=\"_blank\">Vladimir Goncharov</a>)</li>\
+        </ul>\
+        <h3>Rules</h3><hr>\
+        <p>At the beginning of the game a coin will be tossed to determin the player's turn.<br>\
+          Each user has 3 cards to begin with and at the beginning of his every turn 1 card will be added from the deck.<br>\
+          Playing the card you pay for its use by your \"Infinity stones\". This is some equivalent of mana. You can play as many cards as you want while you have enough stones.<br>\
+          To skip the move, click on the coin or wait 30 seconds. To surrender press on the \"cross\" image at your avatar.\
+          Each card deals certain amount of damage to another card or to the enemy player. The main goal of the game is to reduce your oponent's health from 20 points to 0.\
+        </p>\
+        <p style=\"text-align: center;\">Please, visit <a href=\"https://github.com/VitaliiSvietkov/UCODE-CardGame\" target=\"_blank\">this</a> github page to learn more.</p>",
+
+        "CardGamePrev": "Implementation of a multiplayer card game in a battle variation (Gwent and Hearthstone as references)"
       }
     },
     ru: {
@@ -89,7 +112,30 @@ i18next.init({
 
         "ContactHeader": "Обратная связь",
 
-        "ContactDesc": "Напишите мне, если вы заинтересованы в сотрудничестве. С нетерпение жду вашего письма!"
+        "ContactDesc": "Напишите мне, если вы заинтересованы в сотрудничестве. С нетерпение жду вашего письма!",
+
+        "Address": "Улица Пушкинская<br />Харьков, TN 62000<br />Украина",
+
+        "Design": "Дизайн:",
+
+        "UCODE-CardGame": "<br/>\
+        <ul>\
+          <li> <span class=\"scode\">PHP</span> был использован для создания серверной части и хостинга проекта.</li>\
+          <li> <span class=\"scode\">JavaScript</span> помог анимировать, сконструировать и контролировать игровой процесс.</li>\
+          <li> <span class=\"scode\">MVC</span> паттерн был использован для конструирования структуры приложения.</li>\
+          <li> <span class=\"scode\">MySql</span> послужила базой данных.</li>\
+          <li> <span class=\"scode\">HTTP Websocket сервер</span> был взят с <a href=\"https://habr.com/ru/post/209864/\" target=\"_blank\">этого</a> сайта, затем изменён под нужды моего проекта. (автор кода <a href=\"https://github.com/morozovsk/\" target=\"_blank\">Vladimir Goncharov</a>)</li>\
+        </ul>\
+        <h3>Правила</h3><hr>\
+        <p>В начале игры будет подброшена монета для определения хода игрока.<br>\
+          Каждый пользователь имеет поначалу 3 карты и при наступлении каждого его хода, 1 карта будет добавлятся с колоды.<br>\
+          Играя карту, вы платите за неё своими \"Камнями бесконечности\". Это эквивалент маны. Вы можете играть столько карт, сколько хотите, пока у вас есть достаточно камней.<br>\
+          Для пропуска хода, кликните на монету или подождите 30 секунд. Чтобы сдаться, нажмите на картинку \"крестика\" у вашего аватара.\
+          Каждая карта наносит определённое колличество урона другой карте либо самому противнику. Главная цель игры - опустить значение здоровья вашего опонента с 20 единиц до 0.\
+        </p>\
+        <p style=\"text-align: center;\">Пожалуйста, посетите <a href=\"https://github.com/VitaliiSvietkov/UCODE-CardGame\" target=\"_blank\">эту</a> github страницу для лучшего ознакомления.</p>",
+
+        "CardGamePrev": "Реализация мультиплеерной карточной игры в боевой вариации (Gwent и Hearthstone взяты как референсы)"
       }
     }
   }
@@ -109,18 +155,27 @@ function updateContent() {
         learnMore.innerHTML = 'Подробнее';
       else
         learnMore.innerHTML = 'Скрыть';
+
+      document.getElementById('name').placeholder = 'Имя';
+      document.getElementById('message').placeholder = 'Сообщение';
+      document.getElementById('Send').value = 'Отправить';
     }
     else {
       if (learnMore.innerHTML === 'Подробнее')
         learnMore.innerHTML = 'Learn More';
       else
         learnMore.innerHTML = 'Hide';
+
+      document.getElementById('name').placeholder = 'Name';
+      document.getElementById('message').placeholder = 'Message';
+      document.getElementById('Send').value = 'Send Message';
     }
 
   }
 
   let arr = ["Introduction", "Quote", "About", "C/C++", "Layout", "JavaScript", "PHP", "ContactDesc",
-    "Databases", "Additional", "Download", "Works", "Skills", "EduHeader", "Education", "ContactHeader"];
+    "Databases", "Additional", "Download", "Works", "Skills", "EduHeader", "Education", "ContactHeader",
+    "Address", "Design", "UCODE-CardGame", "CardGamePrev"];
   for (let i = 0; i < arr.length; ++i)
     document.getElementById(arr[i]).innerHTML = i18next.t(arr[i]);
 }

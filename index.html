@@ -92,7 +92,7 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a class="image fit thumb" onclick="showDetails(event);"><img src="images/fulls/UCODE-CardGame.jpeg" alt="" /></a>
 								<h3>UCODE-CardGame</h3>
-								<div class="project_info"><br/>
+								<div class="project_info" id="UCODE-CardGame"><br/>
 									<ul>
 										<li> <span class="scode">PHP</span> was used to implement server part and host project.</li>
 										<li> <span class="scode">JavaScript</span> helped to animate, construct and control game process.</li>
@@ -109,7 +109,7 @@
 									</p>
 									<p style="text-align: center;">Please, visit <a href="https://github.com/VitaliiSvietkov/UCODE-CardGame" target="_blank">this</a> github page to learn more.</p>
 								</div>
-								<p>Implementation of a card game in a battle variation (Gwent and Hearthstone as references)</p>
+								<p id="CardGamePrev">Implementation of a card game in a battle variation (Gwent and Hearthstone as references)</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a class="image fit thumb" onclick="showDetails(event);"><img src="https://github.com/VitaliiSvietkov/UCODE-uchat/raw/main/media/Logo-FHD.png?raw=true" alt="" /></a>
@@ -201,16 +201,16 @@
 									</div>
 								</form>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" id="Send" value="Send Message" /></li>
 								</ul>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
 									<li>
 										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										Pushkinska street<br />
+										<span id="Address">Pushkinska street<br />
 										Kharkiv, TN 62000<br />
-										Ukraine
+										Ukraine</span>
 									</li>
 									<li>
 										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
@@ -550,7 +550,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						<li><a href="https://web.telegram.org/#/im?p=@VitaliiSvietkov" class="icon brands fa-telegram" target="_blank"><span class="label">Telegram</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; 2021</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						<li>&copy; 2021</li><li><span id="Design">Design:</span> <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>
