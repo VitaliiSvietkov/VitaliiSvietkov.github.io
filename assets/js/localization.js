@@ -68,7 +68,39 @@ i18next.init({
         </p>\
         <p style=\"text-align: center;\">Please, visit <a href=\"https://github.com/VitaliiSvietkov/UCODE-CardGame\" target=\"_blank\">this</a> github page to learn more.</p>",
 
-        "CardGamePrev": "Implementation of a multiplayer card game in a battle variation (Gwent and Hearthstone as references)"
+        "CardGamePrev": "Implementation of a multiplayer card game in a battle variation (Gwent and Hearthstone as references)",
+
+        "UCODE-uchat": "<br/>\
+        <ul>\
+          <li> <span class=\"scode\">gtk3</span> library was used to create user interface.</li>\
+          <li> Gtk3 sublibrary <span class=\"scode\">cairo</span> was used to draw most of pictures in the application.</li>\
+          <li> <span class=\"scode\">CSS</span> was used to style gtk widgets.</li>\
+          <li> <span class=\"scode\">SQLite</span> was used as a database.</li>\
+          <li> <span class=\"scode\">XML</span> files were used to create a couple of widgets.</li>\
+          <li> <span class=\"scode\">base64</span> algorithm is used to encrypt images before sending them via socket communication from client or server. I used the open source code by Joe DF (<a href=\"https://github.com/joedf\" target=\"_blank\">https://github.com/joedf</a>).</li>\
+        </ul>\
+        <h3> Implemented features</h3><hr>\
+        <h4> Client part</h4><hr>\
+        <ul>\
+          <li>Basic authentication</li>\
+          <li>Reconnection</li>\
+          <li>The user can <strong>delete, edit and copy</strong> the text from the message after it is sended</li>\
+          <li>Image sending</li>\
+          <li>Avatar change</li>\
+          <li>Search by users</li>\
+          <li>Multiple themes</li>\
+          <li>Localization (Ukrainian, Russian, English)</li>\
+          <li>Modifying profile information</li>\
+        </ul>\
+        <h4> Server part</h4><hr>\
+        <ul>\
+          <li>Concurrency</li>\
+          <li><span class=\"scode\">uchat_server</span> works as a <strong>daemon</strong></li>\
+          <li>All necessary data is saved into the database</li>\
+        </ul>\
+        <p style=\"text-align: center;\">Please, visit <a href=\"https://github.com/VitaliiSvietkov/UCODE-uchat\" target=\"_blank\">this</a> github page to learn more.</p>",
+
+        "UchatPrev": "A real-time messaging application for UNIX-like systems"
       }
     },
     ru: {
@@ -135,7 +167,39 @@ i18next.init({
         </p>\
         <p style=\"text-align: center;\">Пожалуйста, посетите <a href=\"https://github.com/VitaliiSvietkov/UCODE-CardGame\" target=\"_blank\">эту</a> github страницу для лучшего ознакомления.</p>",
 
-        "CardGamePrev": "Реализация мультиплеерной карточной игры в боевой вариации (Gwent и Hearthstone взяты как референсы)"
+        "CardGamePrev": "Реализация мультиплеерной карточной игры в боевой вариации (Gwent и Hearthstone взяты как референсы)",
+
+        "UCODE-uchat": "<br/>\
+        <ul>\
+          <li> <span class=\"scode\">gtk3</span> библиотека была использована для создания пользовательского интерфейса.</li>\
+          <li> Gtk3 зависимость <span class=\"scode\">cairo</span> помогла отобразить большинство картинок в приложении.</li>\
+          <li> <span class=\"scode\">CSS</span> был использован для стилизации gtk виджетов.</li>\
+          <li> <span class=\"scode\">SQLite</span> послужила базой данных.</li>\
+          <li> <span class=\"scode\">XML</span> файлы были использованы для создания пары виджетов.</li>\
+          <li> <span class=\"scode\">base64</span> алгоритмом шифруются картинки перед отправкой через сокеты от клиента или сервера. Я использовал код в открытом доступе от Joe DF (<a href=\"https://github.com/joedf\" target=\"_blank\">https://github.com/joedf</a>).</li>\
+        </ul>\
+        <h3> Реализованые особенности</h3><hr>\
+        <h4> Клиентская часть</h4><hr>\
+        <ul>\
+          <li>Базовая авторизация</li>\
+          <li>Переподключение</li>\
+          <li>Пользователь может <strong>удалять, редактировать и копировать</strong> текст сообщения после его отправки</li>\
+          <li>Отправка изображений</li>\
+          <li>Смена аватара</li>\
+          <li>Поиск по пользователям</li>\
+          <li>Несколько цветовых тем</li>\
+          <li>Локализация (Украинский, Русский, Английский)</li>\
+          <li>Изменение информации профиля</li>\
+        </ul>\
+        <h4> Серверная часть</h4><hr>\
+        <ul>\
+          <li>Параллелизм</li>\
+          <li><span class=\"scode\">uchat_server</span> работает как <strong>демонический процесс</strong></li>\
+          <li>Вся необходимая информация сохраняется в базу данных</li>\
+        </ul>\
+        <p style=\"text-align: center;\">Пожалуйста, посетите <a href=\"https://github.com/VitaliiSvietkov/UCODE-uchat\" target=\"_blank\">эту</a> github страницу для лучшего ознакомления.</p>",
+
+        "UchatPrev": "Приложение для обмена сообщениями в реальном времени для UNIX систем"
       }
     }
   }
@@ -157,6 +221,7 @@ function updateContent() {
         learnMore.innerHTML = 'Скрыть';
 
       document.getElementById('name').placeholder = 'Имя';
+      document.getElementById('email').placeholder = 'Почта';
       document.getElementById('message').placeholder = 'Сообщение';
       document.getElementById('Send').value = 'Отправить';
     }
@@ -167,6 +232,7 @@ function updateContent() {
         learnMore.innerHTML = 'Hide';
 
       document.getElementById('name').placeholder = 'Name';
+      document.getElementById('email').placeholder = 'Email';
       document.getElementById('message').placeholder = 'Message';
       document.getElementById('Send').value = 'Send Message';
     }
@@ -175,7 +241,7 @@ function updateContent() {
 
   let arr = ["Introduction", "Quote", "About", "C/C++", "Layout", "JavaScript", "PHP", "ContactDesc",
     "Databases", "Additional", "Download", "Works", "Skills", "EduHeader", "Education", "ContactHeader",
-    "Address", "Design", "UCODE-CardGame", "CardGamePrev"];
+    "Address", "Design", "UCODE-CardGame", "CardGamePrev", "UCODE-uchat", "UchatPrev"];
   for (let i = 0; i < arr.length; ++i)
     document.getElementById(arr[i]).innerHTML = i18next.t(arr[i]);
 }
